@@ -1,7 +1,5 @@
 
-nav {
-    margin-bottom: 15px;
-}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -47,6 +45,7 @@ header {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
+;
     
 }
 
@@ -62,12 +61,19 @@ h1 {
     font-size: 1.5em;
     padding-top: 8px;
     overflow: hidden;
+    text-align: left;
 }
 
 .logo {
     float: left;
     margin-left: 100px;
     margin-top: 10px;
+    border-radius: 120%;
+}
+.separador {
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
     border-radius: 120%;
 }
 
@@ -78,7 +84,7 @@ h1 {
     transition: transform 0.5s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
-    margin-left: 600%;
+    margin-left: 300%;
 }
 
 .hover-giro:hover {
