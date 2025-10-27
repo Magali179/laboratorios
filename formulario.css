@@ -38,7 +38,14 @@ input[type="email"] {
 
 }
 
-input[type="numero"] {
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: rgba(216, 250, 233, 0.911);
+}
+
+input[type="tel"] {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
