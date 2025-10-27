@@ -1,9 +1,20 @@
-
+/* ***Formato greneral de la página*** */
 * {
     font-family: "Story Script", sans-serif;
     font-weight: 800;
     font-style: normal;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    background-color: darkgray;
+    font-family: Verdana;
+}
+
+/* ***Estilo de la barra de navegación*** */
 ul {
     list-style-type: none;
     margin: 0;
@@ -28,15 +39,7 @@ ul li a:hover {
     background-color: #111111;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0px;
-    background-color: darkgray;
-    font-family: Verdana;
-}
-
+/* ***Estilo de los encabezados*** */
 header {
     background-color: rgba(64, 155, 110, 0.911);
     border-width: 3px;
@@ -49,8 +52,6 @@ header {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
-;
-    
 }
 
 .sticky {
@@ -68,16 +69,18 @@ h1 {
     text-align: left;
 }
 
-.logo {
-    float: left;
-    margin-left: 100px;
-    margin-top: 10px;
-    border-radius: 120%;
-}
 .separador {
     float: left;
     margin-left: 50px;
     margin-top: 30px;
+    border-radius: 120%;
+}
+
+/* *** Logo giratorio *** */
+.logo {
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
     border-radius: 120%;
 }
 
@@ -95,6 +98,7 @@ h1 {
     transform: rotateY(360deg);
 }
 
+/* ***Titulos*** */
 h2,
 h3, h4 {
     font-size: 1.3em;
@@ -106,6 +110,7 @@ h3, h4 {
     background-color: rgba(3, 0, 2, 0.911);
 }
 
+/* Foto y figuras */
 figure {
     justify-content: center;
     margin: auto;
@@ -128,6 +133,7 @@ figcaption {
     width: 40%;
 }
 
+/* ***Main y artículos presentacion personal*** */
 main {
     flex: 1;
 }
@@ -141,6 +147,7 @@ article {
     line-height: 1.6;
 }
 
+/* ***Estilo de las tablas*** */
 form {
     background-color: white;
     padding: 20px;
@@ -176,6 +183,8 @@ tr {
      border-radius: 8px;
 }
 
+/* ***Estilo de los formularios*** */
+/* ***Estilo de los inputs*** */
 input[type="text"] {
     width: 100%;
     padding: 8px;
@@ -223,6 +232,7 @@ input[type="tel"] {
     background-color: rgba(216, 250, 233, 0.911);
 }
 
+/* ***Estilo de los labels*** */
 label, select {
     width: 100%;
     padding: 8px;
@@ -233,6 +243,7 @@ select {
     background-color: rgba(216, 250, 233, 0.911);
 }
 
+/* ***Estilo de los fieldsets- radio y checkbox *** */
 fieldset {
       border: 3px solid rgba(64, 155, 110, 0.911); 
       padding: 10px 15px 15px 15px; 
@@ -245,6 +256,7 @@ legend {
       font-weight: bold;
 }
 
+/* ***Estilo del boton*** */
 button {
     background-color: rgba(8, 82, 45, 0.911);
     border-radius: 8px;
@@ -254,6 +266,7 @@ button {
     font-weight: bold;
 }
 
+/* ***Estilo del footer*** */
 footer {
     background-color: rgb(180, 179, 174);
     border-top: 2px solid brown;
