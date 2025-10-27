@@ -1,3 +1,7 @@
+
+nav {
+    margin-bottom: 15px;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -43,20 +47,10 @@ header {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
+    
 }
 
-footer {
-    background-color: rgb(180, 179, 174);
-    border-top: 2px solid brown;
-    border-radius: 8px;
-    font-family: sans-serif;
-    color: white;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
 
-}
 
 header,
 h1 {
@@ -64,6 +58,27 @@ h1 {
     font-size: 1.5em;
     padding-top: 8px;
     overflow: hidden;
+}
+
+.logo {
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+    border-radius: 120%;
+}
+
+.hover-giro {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    margin-left: 600%;
+}
+
+.hover-giro:hover {
+    transform: rotateY(360deg);
 }
 
 h2,
@@ -110,4 +125,17 @@ article {
     text-align: justify;
     padding: 15px;
     line-height: 1.6;
+}
+
+footer {
+    background-color: rgb(180, 179, 174);
+    border-top: 2px solid brown;
+    border-radius: 8px;
+    font-family: sans-serif;
+    color: white;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+
 }
