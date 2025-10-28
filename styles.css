@@ -52,6 +52,7 @@ header {
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
+    padding: 1310 px 350px 233px  ;
 }
 
 .sticky {
@@ -67,9 +68,10 @@ h1 {
     padding-top: 8px;
     overflow: hidden;
     text-align: left;
+  
 }
 
-.separador {
+.contenedor {
     float: left;
     margin-left: 50px;
     margin-top: 30px;
@@ -80,7 +82,7 @@ h1 {
 .logo {
     float: left;
     margin-left: 100px;
-    margin-top: 10px;
+    margin-top: -9px;
     border-radius: 120%;
 }
 
