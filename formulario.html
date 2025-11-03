@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"
       rel="stylesheet"
     />
-   
-    
-     <title>Formulario de Registro</title>
-</head>
-<body id="inicio">
+
+    <title>Formulario de Registro</title>
+  </head>
+  <body id="inicio">
     <header class="sticky">
       <nav>
         <ul>
@@ -22,112 +21,151 @@
           <li><a href="Acercade.html" target="_blank">Acerca de mi</a></li>
         </ul>
       </nav>
-        <h1>Completar el formulario</h1>
-                        
+      <h1>Completar el formulario</h1>
     </header>
-     
-        
-        <form>
-            <label>Nombre:</label>
-            <p><input type="text" name="nombre" required maxlength="20"></p>
-            
-            <label>Apellido:</label>
-            <p><input type="text" name="apellido"  maxlength="20"></p>
-        
-            <label>Correo Electrónico:</label>
-            <p><input type="email" name="email" required maxlength="50" value="@"></p>
-        
-            <label>Teléfono:</label>
-            <p><input type="tel" name="telefono" required onclick="this.value=''"  pattern="[0-9]{4}-[2-9]{2}-[0-9]{6}" placeholder="2920-15-000000"></p>
-        
-            <label>Edad:</label>
-            <p><input type="number" name="edad"  min="16" max="120" value="16"></p>
-        
-            <label>Dirección:</label>
-            <p><textarea id="direc"  name="dirección" rows="3" cols="30" placeholder="Ingrese su dirección aquí..."></textarea></p>
-            
-        
-            <label>Provincia:</label>
-            <p><input type="text" name="provincia"></p>
-        
-            <Label>Seleccione Provincia de la Patagonia:</Label>
-            <p><select name="provincia">
-                    <option value="La Pampa">La Pampa</option>
-                    <option value="Neuquén">Neuquén</option>
-                    <option value="Río Negro">Río Negro</option>
-                    <option value="Chubut">Chubut</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="Tierra del Fuego">Tierra del Fuego</option></select></p>
-            
-            <label>Código Postal:</label>
-            <p><input type="text" name="CódigoPostal" pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}" maxlength="8" placeholder="A1234ABC"></p>
-        <fieldset>
-            <legend>Método de preferencia de contacto:</legend>
-            <input type="radio" name="contact" checked="" value="1">Correo Electrónico
-            <input type="radio" name="contact" value="2">Correo Postal
-            <input type="radio" name="contact" value="3">Teléfono
-        </fieldset>
-        
-        <fieldset>
-            <legend>Metodo de preferencia de suscripción</legend>
-            <input type="checkbox" name="suscrip" value="1">Noticias
-            <input type="checkbox" name="suscrip" value="2">Promociones
-            <input type="checkbox" name="suscrip" value="3" checked="">alertas
-            <input type="checkbox" name="suscrip" value="4">Eventos
-        </fieldset>
-        
-        <p><button  onclick="alert('Bienvenidos a mi mundo!')" name=”pulsame” value=”Pulsame”>Presione aquí ! </button></p>
 
+    <form>
+      <label>Nombre:</label>
+      <p><input type="text" name="nombre" required maxlength="20" /></p>
+
+      <label>Apellido:</label>
+      <p><input type="text" name="apellido" maxlength="20" /></p>
+
+      <label>Correo Electrónico:</label>
+      <p>
+        <input type="email" name="email" required maxlength="50" value="@" />
+      </p>
+
+      <label>Teléfono:</label>
+      <p>
+        <input
+          type="tel"
+          name="telefono"
+          required
+          onclick="this.value=''"
+          pattern="[0-9]{4}-[2-9]{2}-[0-9]{6}"
+          placeholder="2920-15-000000"
+        />
+      </p>
+
+      <label>Edad:</label>
+      <p><input type="number" name="edad" min="16" max="120" value="16" /></p>
+
+      <label>Dirección:</label>
+      <p>
+        <textarea
+          id="direc"
+          name="dirección"
+          rows="3"
+          cols="30"
+          placeholder="Ingrese su dirección aquí..."
+        ></textarea>
+      </p>
+
+      <label>Provincia:</label>
+      <p><input type="text" name="provincia" /></p>
+
+      <label>Seleccione Provincia de la Patagonia:</label>
+      <p>
+        <select name="provincia">
+          <option value="La Pampa">La Pampa</option>
+          <option value="Neuquén">Neuquén</option>
+          <option value="Río Negro">Río Negro</option>
+          <option value="Chubut">Chubut</option>
+          <option value="Santa Cruz">Santa Cruz</option>
+          <option value="Tierra del Fuego">Tierra del Fuego</option>
+        </select>
+      </p>
+
+      <label>Código Postal:</label>
+      <p>
+        <input
+          type="text"
+          name="CódigoPostal"
+          pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}"
+          maxlength="8"
+          placeholder="A1234ABC"
+        />
+      </p>
+      <fieldset>
+        <legend>Método de preferencia de contacto:</legend>
+        <input type="radio" name="contact" checked="" value="1" />Correo
+        Electrónico <input type="radio" name="contact" value="2" />Correo Postal
+        <input type="radio" name="contact" value="3" />Teléfono
+      </fieldset>
+
+      <fieldset>
+        <legend>Metodo de preferencia de suscripción</legend>
+        <input type="checkbox" name="suscrip" value="1" />Noticias
+        <input type="checkbox" name="suscrip" value="2" />Promociones
+        <input type="checkbox" name="suscrip" value="3" checked="" />alertas
+        <input type="checkbox" name="suscrip" value="4" />Eventos
+      </fieldset>
+
+      <p>
+        <button
+          onclick="alert('Bienvenidos a mi mundo!')"
+          name="”pulsame”"
+          value="”Pulsame”"
+        >
+          Presione aquí !
+        </button>
+      </p>
     </form>
 
     <table>
-        <thead>
-            <tr>
-                <th>Datos personales</th>
-                <th>Valores</th>
-            </tr>
-        </thead>
-        <tbody>
-     
-            <tr>
-                <td >Nombre</td>
-                <td ></td>
-            </tr>
-                <td>Apellido</td>
-                <td></td>
-            </tr>
-                <td>Email</td>
-                <td></td>
-            </tr>
-                <td>Teléfono</td>
-                <td></td>
-            </tr>
-                <td>Edad</td>
-                <td></td>   
-            </tr>
-                <td>Dirección</td>
-                <td></td>
-            </tr>
-                <td>Provincia</td>
-                <td></td>
-            </tr>
-                <td>Código Postal</td>
-                <td></td>
-            </tr>
-            </tr>
-                <td>Preferencia de contacto</td>
-                <td></td>
-            </tr>
-            </tr>
-                <td>Preferencia de suscripción</td>
-                <td></td>
-            </tr>
-        </tbody>
-    
+      <thead>
+        <tr>
+          <th>Datos personales</th>
+          <th>Valores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nombre</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apellido</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Teléfono</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Edad</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Dirección</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Provincia</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Código Postal</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Preferencia de contacto</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Preferencia de suscripción</td>
+          <td></td>
+        </tr>
+      </tbody>
     </table>
     <nav class="principal">
-            <a href="Acercade.html" target="_blank">Volver a la página principal</a>
-        </nav>
+      <a href="Acercade.html" target="_blank">Volver a la página principal</a>
+    </nav>
 
     <footer>
       &copy; 2025 Magalí Moreno - Todos los derechos reservados<br />
@@ -137,6 +175,5 @@
         <a href="#inicio" class="dot">&#8679;</a>
       </p>
     </footer>
-
-</body>
+  </body>
 </html>
