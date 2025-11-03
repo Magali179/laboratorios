@@ -70,9 +70,15 @@ nav {
     padding: 15px;
     z-index: 1000; /* para que quede sobre otros elementos */
 }
+.principal {
+    display: inline-block;
+    position: relative;
+    margin-left: 80%;
+    background-color: darkgray;
+}
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: white;
     text-align: left;
     margin: 0;
@@ -156,7 +162,15 @@ article {
     margin-top: 25px;
     text-align: justify;
     padding: 15px;
-    line-height: 1.6;
+    line-height: 1.8;
+}
+
+p::first-line {
+  margin-top: 20px;
+}
+
+.sangria{
+    text-indent: 50px;
 }
 
 /* ***Estilo de las tablas*** */
@@ -282,13 +296,21 @@ button {
 footer {
     background-color: rgb(180, 179, 174);
     border-top: 2px solid brown;
-    border-radius: 8px;
+    border-bottom: 2px solid brown;
+    border-left: 2px solid brown;
+    border-right: 2px solid brown;
+    border-radius: 12px;
+    border-left: 15px;
+    line-height:- 2px;
     font-family: sans-serif;
     color: white;
-    width: 100%;
+    width: 99%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
     overflow: hidden;
+    text-align: center;
 
 }
 /* ***Botón volver arriba*** */
@@ -305,7 +327,7 @@ footer {
     font-size: 1.5rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
+  margin-bottom: 10px;
     margin: 20px 0 20px auto;
 }
 
