@@ -1,25 +1,8 @@
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(177, 214, 195, 0.911);
-}
-
-ul li {
-    float: left;
-}
-
-ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    background-color: #111111;
+/* ***Formato greneral de la página*** */
+* {
+    font-family: "Story Script", sans-serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 body {
@@ -31,43 +14,111 @@ body {
     font-family: Verdana;
 }
 
+/* ***Estilo de la barra de navegación*** */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(177, 214, 195, 0.911);
+    border-radius: 8px;
+}
+
+ul li {
+    float: left;
+    margin-left: 0px;
+    margin-right: 0px;
+;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+ul li a:hover {
+    background-color: #111111;
+}
+
+/* ***Estilo de los encabezados*** */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgba(64, 155, 110, 0.911);
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgba(128, 126, 126, 0.493);
-    border-radius: 8px;
-    border-bottom: 2px;
-    font-family: sans-serif;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 15px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: rgb(180, 179, 174);
-    border-top: 2px solid brown;
-    border-radius: 8px;
-    font-family: sans-serif;
+.sticky {
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+
+nav {
     color: white;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: hidden;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 15px;
+    z-index: 1000; /* para que quede sobre otros elementos */
+}
+.principal {
+    display: inline-block;
+    position: relative;
+    margin-left: 80%;
+    background-color: darkgray;
 }
 
-header,
-h1 {
+header h1 {
+    font-size: 4rem;
     color: white;
-    font-size: 1.5em;
-    padding-top: 8px;
-    overflow: hidden;
+    text-align: left;
+    margin: 0;
+    
+    padding: 20px;
+    border-radius: 10px;
 }
 
+.contenedor {
+    float: left;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 120%;
+}
+
+/* *** Logo giratorio *** */
+.logo {
+    float: left;
+    margin-left: 100px;
+    margin-top: -9px;
+    border-radius: 120%;
+}
+
+.hover-giro {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+   
+}
+
+.hover-giro:hover {
+    transform: rotateY(360deg);
+}
+
+/* ***Titulos*** */
 h2,
-h3 {
+h3, h4 {
     font-size: 1.3em;
     color: bisque;
     border-radius: 8px;
@@ -77,6 +128,7 @@ h3 {
     background-color: rgba(3, 0, 2, 0.911);
 }
 
+/* Foto y figuras */
 figure {
     justify-content: center;
     margin: auto;
@@ -99,6 +151,7 @@ figcaption {
     width: 40%;
 }
 
+/* ***Main y artículos presentacion personal*** */
 main {
     flex: 1;
 }
@@ -109,5 +162,176 @@ article {
     margin-top: 25px;
     text-align: justify;
     padding: 15px;
-    line-height: 1.6;
+    line-height: 1.8;
+}
+
+p::first-line {
+  margin-top: 20px;
+}
+
+.sangria{
+    text-indent: 50px;
+}
+
+/* ***Estilo de las tablas*** */
+form {
+    background-color: white;
+    padding: 20px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    width: 100%;
+    padding: auto;
+    overflow: hidden;
+}
+
+th,
+td {
+    border: 2px solid ;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(64, 155, 110, 0.911);
+     border-radius: 8px;
+}
+
+tr {
+    background-color: rgba(216, 250, 233, 0.911);
+     border-radius: 8px;
+}
+
+/* ***Estilo de los formularios*** */
+/* ***Estilo de los inputs*** */
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid rgba(64, 155, 110, 0.911); 
+    border-radius: 8px;
+    background-color: rgba(216, 250, 233, 0.911);
+    
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+     border: 2px solid rgba(64, 155, 110, 0.911); 
+    border-radius: 8px;
+    background-color:  rgba(216, 250, 233, 0.911)
+
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+     border: 2px solid rgba(64, 155, 110, 0.911); 
+    border-radius: 8px;
+    background-color: rgba(216, 250, 233, 0.911);
+}
+
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+     border: 2px solid rgba(64, 155, 110, 0.911); 
+    border-radius: 8px;
+    background-color: rgba(216, 250, 233, 0.911);
+}
+
+#direc {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid rgba(64, 155, 110, 0.911); 
+    border-radius: 8px;
+    background-color: rgba(216, 250, 233, 0.911);
+}
+
+/* ***Estilo de los labels*** */
+label, select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;  
+}
+
+select {
+    background-color: rgba(216, 250, 233, 0.911);
+}
+
+/* ***Estilo de los fieldsets- radio y checkbox *** */
+fieldset {
+      border: 3px solid rgba(64, 155, 110, 0.911); 
+      padding: 10px 15px 15px 15px; 
+      border-radius: 8px;
+      width: 97%; 
+}
+
+legend {
+      padding: 0 10px;
+      font-weight: bold;
+}
+
+/* ***Estilo del boton*** */
+button {
+    background-color: rgba(8, 82, 45, 0.911);
+    border-radius: 8px;
+    padding: 15px 20px;
+    color:antiquewhite ;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ***Estilo del footer*** */
+footer {
+    background-color: rgb(180, 179, 174);
+    border-top: 2px solid brown;
+    border-bottom: 2px solid brown;
+    border-left: 2px solid brown;
+    border-right: 2px solid brown;
+    border-radius: 12px;
+    border-left: 15px;
+    line-height:- 2px;
+    font-family: sans-serif;
+    color: white;
+    width: 99%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    text-align: center;
+
+}
+/* ***Botón volver arriba*** */
+.dot {
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    color:  white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+    margin: 20px 0 20px auto;
+}
+
+.dot:hover {
+    background-color:  rgba(8, 82, 45, 0.911);
+    transform: scale(1.1) translateY(-3px);
 }

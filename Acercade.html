@@ -2,25 +2,37 @@
 <html lang="es">
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-    <title>Acerca de</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Story+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Acerca de mi</title>
   </head>
 
-  <body>
-    <header>
+  <body id="inicio">
+    <header class="sticky">
       <nav>
         <ul>
           <li><a href="index.html" target="_blank">Index</a></li>
           <li><a href="formulario.html" target="_blank">Formulario</a></li>
         </ul>
       </nav>
-
-      <h1>Bienvenidos a mi página!!</h1>
+      <div class="contenedor">
+        <h1>Bienvenidos a mi página!!</h1>
+      </div>
+      <div class="logo">
+        <img src="logopedco.png" title="Logo Curza" class="hover-giro" />
+      </div>
     </header>
 
     <main>
       <article>
         <h2>Palábras autobiográficas</h2>
-        <p>
+        <p class="sangria">
           Llegué a este mundo un 2 de enero de 1981. Soy nacida y criada en
           Viedma, Río Negro. Pero desde hace mas de 17 años vivo en la ciudad
           vecina de Carmen de Patagones, Provincia de Buenos Aires. Aquí recido
@@ -37,12 +49,54 @@
       <figure>
         <img src="magali.jpeg" title="Mi foto" />
       </figure>
+
+      <article>
+        <h3>Mis hobbies</h3>
+        <p class="sangria">
+          En mi vida diaria hay varias actividades que me gustan realizar. Pero
+          las dos más relevantes son: una rutina semanal de entrenamiento físico
+          y el aprendizaje constante de nuevos conociminetos de temas de interes
+          personal y profesional. Partiendo de la base de que me dedico a la
+          docencia, siempre estoy en la búsqueda de nuevas herramientas y
+          recursos que me permitan mejorar mi desempeño laboral y enriquecer mi
+          intelecto. Por dicho motivo, suelo realizar cursos de formación y
+          capacitaciones, desde hace años. Ya que la educación es un proceso
+          dinámico y en constante evolución. Esa busqueda constante me llevó a
+          descubrir el mundo de la programación web. Así fue como comencé a
+          aprender HTML y CSS, y me fascinó la idea de crear páginas web
+          interactivas y atractivas. Disfruto mucho del proceso de diseño y
+          desarrollo de sitios web, y me encanta ver cómo mis ideas cobran vida
+          en la pantalla. Así fue como comencé a dar mis primeros pasos en una
+          Tecnicatura en la Universidad Nacional del Comahue.
+        </p>
+      </article>
+      <article>
+        <h4>Mis estudios actuales</h4>
+        <p class="sangria">
+          Actualmente, estoy cursando el primer año de la
+          <a
+            href="https://uncoma.edu.ar/carreras/tecnicatura-universitaria-en-desarrollo-web/"
+            target="_blank"
+            >"Tecnicatura en Desarrollo Web"</a
+          >
+          Esta carrera me ha brindado una sólida base en los fundamentos básicos
+          del desarrollo web, incluyendo HTML, CSS, JavaScript y otras
+          tecnologías relacionadas. Estoy emocionada por seguir aprendiendo y
+          creciendo en este campo, y espero, no solo poder aplicar mis
+          conocimientos para crear sitios web innovadores y funcionales en el
+          futuro, sino que además anelo poder ponerlos en práctica en mi día a
+          día laboral.
+        </p>
+      </article>
     </main>
 
     <footer>
       &copy; 2025 Magalí Moreno - Todos los derechos reservados<br />
       Monseñor Esandi y Ayacucho <br />
       8500 – Viedma, Río Negro, Argentina
+      <p>
+        <a href="#inicio" class="dot">&#8679;</a>
+      </p>
     </footer>
   </body>
 </html>
