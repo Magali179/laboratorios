@@ -35,13 +35,13 @@
             <p><input id="apellido" type="text" name="apellido"  maxlength="20"></p>
         
             <label>Correo Electrónico:</label>
-            <p><input id="correo" type="email" name="email" required maxlength="50" value="@"></p>
+            <p><input id="correo" type="email" name="email" required maxlength="50" ></p>
         
             <label>Teléfono:</label>
             <p><input id="tel" type="tel" name="telefono" required onclick="this.value=''"  pattern="[0-9]{4}-[2-9]{2}-[0-9]{6}" placeholder="2920-15-000000"></p>
         
             <label>Edad:</label>
-            <p><input id="edad"  type="number" name="edad"  min="16" max="120" value="16"></p>
+            <p><input id="edad"  type="number" name="edad"  min="16" max="120" ></p>
         
             <label>Dirección:</label>
             <p><textarea id="direc"  name="dirección" rows="3" cols="30" placeholder="Ingrese su dirección aquí..."></textarea></p>
@@ -52,6 +52,7 @@
         
             <Label>Seleccione Provincia de la Patagonia:</Label>
             <p><select name="provincia">
+                    <option value=""></option>
                     <option value="La Pampa">La Pampa</option>
                     <option value="Neuquén">Neuquén</option>
                     <option value="Río Negro">Río Negro</option>
@@ -122,6 +123,7 @@
                 <td>Preferencia de suscripción</td>
                 <td></td>
             </tr>
+            <script src="script.js"></script>
         </tbody>
     
     </table>
