@@ -175,6 +175,24 @@ p::first-line {
     text-indent: 50px;
 }
 
+.primer-article {
+    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: justify;
+    padding: 15px;
+    line-height: 1.8;
+}
+article p:first-of-type::first-line {
+    position: sticky;
+    top: 0;
+    background-color: darkgray;
+    z-index: 10;
+    display: block;
+}
+
 /* ***Estilo de las tablas*** */
 form {
     background-color: white;
