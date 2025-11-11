@@ -118,7 +118,7 @@ header h1 {
 
 /* ***Titulos*** */
 h2,
-h3, h4 {
+h3, h4,h5 {
     font-size: 1.3em;
     color: bisque;
     border-radius: 8px;
@@ -151,6 +151,8 @@ figcaption {
     width: 40%;
 }
 
+
+
 /* ***Main y artículos presentacion personal*** */
 main {
     flex: 1;
@@ -171,6 +173,24 @@ p::first-line {
 
 .sangria{
     text-indent: 50px;
+}
+
+.primer-article {
+    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: justify;
+    padding: 15px;
+    line-height: 1.8;
+}
+article p:first-of-type::first-line {
+    position: sticky;
+    top: 0;
+    background-color: darkgray;
+    z-index: 10;
+    display: block;
 }
 
 /* ***Estilo de las tablas*** */
@@ -334,4 +354,28 @@ footer {
 .dot:hover {
     background-color:  rgba(8, 82, 45, 0.911);
     transform: scale(1.1) translateY(-3px);
+}
+
+.btn-leer-mas {
+    background-color: rgba(64, 155, 110, 0.911);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-leer-mas:hover {
+    background-color: rgba(8, 82, 45, 0.911);
+    transform: scale(1.05);
+}
+
+/* ***Contenedores CV*** */
+.cv-abreviado,
+.cv-completo {
+    transition: opacity 0.3s ease;
 }
