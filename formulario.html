@@ -35,10 +35,10 @@
             <p><input id="apellido" type="text" name="apellido"  maxlength="20"></p>
         
             <label>Correo Electrónico:</label>
-            <p><input id="correo" type="email" name="email" required maxlength="50" ></p>
+            <p><input id="correo" type="email" name="correo" required></p>
         
             <label>Teléfono:</label>
-            <p><input id="tel" type="tel" name="telefono" required onclick="this.value=''"  pattern="[0-9]{4}-[2-9]{2}-[0-9]{6}" placeholder="2920-15-000000"></p>
+            <p><input id="tel" type="tel" name="telefono" required onclick="this.value=''"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{6}" placeholder="2920-15-000000"></p>
         
             <label>Edad:</label>
             <p><input id="edad"  type="number" name="edad"  min="16" max="120" ></p>
@@ -46,22 +46,21 @@
             <label>Dirección:</label>
             <p><textarea id="direc"  name="dirección" rows="3" cols="30" placeholder="Ingrese su dirección aquí..."></textarea></p>
             
-        
-            <label>Provincia:</label>
-            <p><input id="provincia" type="text" name="provincia"></p>
-        
-            <Label>Seleccione Provincia de la Patagonia:</Label>
-            <p><select name="provincia">
-                    <option value=""></option>
-                    <option value="La Pampa">La Pampa</option>
-                    <option value="Neuquén">Neuquén</option>
-                    <option value="Río Negro">Río Negro</option>
-                    <option value="Chubut">Chubut</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="Tierra del Fuego">Tierra del Fuego</option></select></p>
-            
+                          
+            <Label>Provincia:</Label>
+            <p>
+            <input type="text" id="provincia" name="provincia" list="provincias-list" placeholder="Escriba o seleccione una provincia" required>  
+            <datalist id="provincias-list">
+                <option value="La Pampa">
+                <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Chubut">
+                <option value="Santa Cruz">
+                <option value="Tierra del Fuego">
+            </datalist>
+            </p>
             <label>Código Postal:</label>
-            <p><input id="codigopostal" type="text" name="CódigoPostal" pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}" maxlength="8" placeholder="A1234ABC"></p>
+            <p><input id="codigopostal" type="text" name="CódigoPostal" pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}" maxlength="8" placeholder="A1234ABC" required></p>
         <fieldset>
             <legend>Método de preferencia de contacto:</legend>
             <input type="radio" name="contact" checked="" value="1">Correo Electrónico

@@ -379,3 +379,20 @@ footer {
 .cv-completo {
     transition: opacity 0.3s ease;
 }
+
+/* ***Estilo para campos inválidos (validación)*** */
+input.campo-invalido {
+    border: 2px solid #d32f2f !important;
+    background-color: #ffebee !important;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+/* Estilo para cuando el campo se vuelve válido */
+input:valid:not(:placeholder-shown) {
+    border-color: rgba(64, 155, 110, 0.911);
+}
+
+/* Estilo nativo del navegador para campos inválidos */
+input:invalid:not(:placeholder-shown):not(:focus) {
+    border-color: #d32f2f;
+}
