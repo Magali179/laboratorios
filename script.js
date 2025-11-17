@@ -1,18 +1,99 @@
-// Crear un archivo script.js
-
-// - Vincular el archivo al HTML del formulario
-
-// - Añadir interactividad: Todo lo cargado en el formulario debe reflejarse en 
-// la tabla inferior al terminar de rellenar cada campo (sin necesidad de botones)
-
-// - En la página de "Acerca de" hacer un botón de "Leer más". Deberá mostrarse el
-//  currículum de manera abreviada y al hacer clic en el botón de leer más, 
-// deberá revelarse el CV completo (rellenar con Lorem Ipsum si es necesario)
-
 // ========================================
 // FUNCIONALIDAD FORMULARIO Y PAGINA ACERCA DE
 
 document.addEventListener('DOMContentLoaded', function() {
+    
+    // ========================================
+    // VALIDACIÓN AUTOMÁTICA DE CAMPOS
+    // ========================================
+    
+    // Aplicar validación a todos los campos input del formulario
+    // Compatible con Chrome, Firefox, Safari, Edge
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('blur', function() {
+            // Verificar si el campo es válido
+            if (!this.checkValidity()) {
+                // Método 1: Intentar con reportValidity (funciona en la mayoría)
+                if (typeof this.reportValidity === 'function') {
+                    this.reportValidity();
+                } else {
+                    // Método 2: Fallback para navegadores más antiguos
+                    // Agregar clase de error visual
+                    this.classList.add('campo-invalido');
+                    
+                    // Mostrar mensaje de validación personalizado
+                    const mensajeError = this.validationMessage;
+                    if (mensajeError) {
+                        alert(mensajeError);
+                    }
+                }
+            } else {
+                // Remover clase de error si el campo es válido
+                this.classList.remove('campo-invalido');
+            }
+        });
+        
+        // También validar cuando el usuario escribe (opcional, mejora la UX)
+        input.addEventListener('input', function() {
+            if (this.checkValidity()) {
+                this.classList.remove('campo-invalido');
+            }
+        });
+    });
+    
+    // ========================================
+    // BLOQUEAR AVANCE A SIGUIENTE CAMPO
+    // ========================================
+    
+    // Función para prevenir que el usuario avance si el campo actual no es válido
+    document.querySelectorAll('input, select, textarea').forEach((campo, index, todosCampos) => {
+        
+        // Evento cuando intenta salir del campo (Tab, Enter, click en otro campo)
+        campo.addEventListener('keydown', function(e) {
+            // Si presiona Tab o Enter
+            if (e.key === 'Tab' || e.key === 'Enter') {
+                // Verificar si el campo actual es válido
+                if (!this.checkValidity()) {
+                    e.preventDefault(); // Bloquear el avance
+                    
+                    // Mostrar mensaje de error
+                    if (typeof this.reportValidity === 'function') {
+                        this.reportValidity();
+                    } else {
+                        alert('Por favor, complete correctamente este campo antes de continuar.');
+                    }
+                    
+                    // Agregar clase visual de error
+                    this.classList.add('campo-invalido');
+                    
+                    // Mantener el foco en el campo actual
+                    this.focus();
+                }
+            }
+        });
+        
+        // Prevenir click en otro campo si el actual no es válido
+        campo.addEventListener('blur', function(e) {
+            if (!this.checkValidity() && this.value.trim() !== '') {
+                // Si el campo tiene contenido pero es inválido
+                setTimeout(() => {
+                    this.focus(); // Devolver el foco al campo inválido
+                    this.classList.add('campo-invalido');
+                }, 0);
+            }
+        });
+        
+        // Permitir navegación cuando el campo se corrige
+        campo.addEventListener('input', function() {
+            if (this.checkValidity()) {
+                this.classList.remove('campo-invalido');
+            }
+        });
+    });
+    
+    // ========================================
+    // FUNCIONALIDAD FORMULARIO
+    // ========================================
     
     // Verificar si estamos en la pagina del formulario
     const nombre = document.getElementById('nombre');
@@ -32,16 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkboxSuscrip = document.querySelectorAll('input[name="suscrip"]');
         
         const tablaCeldas = document.querySelectorAll('tbody td:nth-child(2)');
-
-// Validación de campos al perder el foco
-        document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('blur', () => {
-        if (!input.checkValidity()) {
-        input.reportValidity(); // Muestra el mensaje de validación del navegador
-    }
-    });
-});
-
         
         function actualizarTabla() {
             console.log("Actualizando tabla...");
@@ -53,7 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
             tablaCeldas[4].textContent = edad.value;
             tablaCeldas[5].textContent = direccion.value;
             
-            const provinciaTexto = provincia.value || selectProvincia.value;
+            // Usar el valor del input text de provincia (que tiene el datalist)
+            const provinciaTexto = provincia.value || (selectProvincia ? selectProvincia.value : '');
             tablaCeldas[6].textContent = provinciaTexto;
             
             tablaCeldas[7].textContent = codigop.value;
@@ -76,17 +148,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             tablaCeldas[9].textContent = suscripcionesSeleccionadas.join(', ');
         }
-        //agragar elementos de imput a cada campo de texto de la tabla
+        
+        // Agregar eventos de input a cada campo de texto de la tabla
         nombre.addEventListener('input', actualizarTabla);
         apellido.addEventListener('input', actualizarTabla);
         correo.addEventListener('input', actualizarTabla);
-        
         tel.addEventListener('input', actualizarTabla);
         edad.addEventListener('input', actualizarTabla);
         direccion.addEventListener('input', actualizarTabla);
         provincia.addEventListener('input', actualizarTabla);
         codigop.addEventListener('input', actualizarTabla);
-        selectProvincia.addEventListener('change', actualizarTabla);
+        
+        if (selectProvincia) {
+            selectProvincia.addEventListener('change', actualizarTabla);
+        }
         
         radioContact.forEach(radio => {
             radio.addEventListener('change', actualizarTabla);
