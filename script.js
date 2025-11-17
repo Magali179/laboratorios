@@ -1,14 +1,12 @@
-// ========================================
+
 // FUNCIONALIDAD FORMULARIO Y PAGINA ACERCA DE
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ========================================
+ 
     // VALIDACIÓN AUTOMÁTICA DE CAMPOS
-    // ========================================
-    
     // Aplicar validación a todos los campos input del formulario
-    // Compatible con Chrome, Firefox, Safari, Edge
+ 
     document.querySelectorAll('input').forEach(input => {
         input.addEventListener('blur', function() {
             // Verificar si el campo es válido
@@ -33,18 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // También validar cuando el usuario escribe (opcional, mejora la UX)
+        //cuando el usuario escribe 
         input.addEventListener('input', function() {
             if (this.checkValidity()) {
                 this.classList.remove('campo-invalido');
             }
         });
     });
-    
-    // ========================================
+     
     // BLOQUEAR AVANCE A SIGUIENTE CAMPO
-    // ========================================
-    
+  
     // Función para prevenir que el usuario avance si el campo actual no es válido
     document.querySelectorAll('input, select, textarea').forEach((campo, index, todosCampos) => {
         
@@ -91,10 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ========================================
     // FUNCIONALIDAD FORMULARIO
-    // ========================================
-    
+  
     // Verificar si estamos en la pagina del formulario
     const nombre = document.getElementById('nombre');
     
