@@ -66,10 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             tablaCeldas[9].textContent = suscripcionesSeleccionadas.join(', ');
         }
-        
+        //agragar elementos de imput a cada campo de texto de la tabla
         nombre.addEventListener('input', actualizarTabla);
         apellido.addEventListener('input', actualizarTabla);
         correo.addEventListener('input', actualizarTabla);
+        
         tel.addEventListener('input', actualizarTabla);
         edad.addEventListener('input', actualizarTabla);
         direccion.addEventListener('input', actualizarTabla);
