@@ -51,15 +51,17 @@
             <p><input id="provincia" type="text" name="provincia"></p>
         
             <Label>Seleccione Provincia de la Patagonia:</Label>
-            <p><select name="provincia">
-                    <option value=""></option>
-                    <option value="La Pampa">La Pampa</option>
-                    <option value="Neuquén">Neuquén</option>
-                    <option value="Río Negro">Río Negro</option>
-                    <option value="Chubut">Chubut</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="Tierra del Fuego">Tierra del Fuego</option></select></p>
-            
+            <p>
+            <input type="text" id="provincia" name="provincia" list="provincias-list" placeholder="Escriba o seleccione una provincia" required>  
+            <datalist id="provincias-list">
+                <option value="La Pampa">
+                <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Chubut">
+                <option value="Santa Cruz">
+                <option value="Tierra del Fuego">
+            </datalist>
+            </p>
             <label>Código Postal:</label>
             <p><input id="codigopostal" type="text" name="CódigoPostal" pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}" maxlength="8" placeholder="A1234ABC" required></p>
         <fieldset>

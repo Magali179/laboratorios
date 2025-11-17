@@ -32,6 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const checkboxSuscrip = document.querySelectorAll('input[name="suscrip"]');
         
         const tablaCeldas = document.querySelectorAll('tbody td:nth-child(2)');
+
+// Validación de campos al perder el foco
+        document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('blur', () => {
+        if (!input.checkValidity()) {
+        input.reportValidity(); // Muestra el mensaje de validación del navegador
+    }
+    });
+});
+
         
         function actualizarTabla() {
             console.log("Actualizando tabla...");
